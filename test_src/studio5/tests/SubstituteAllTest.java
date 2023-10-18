@@ -23,12 +23,12 @@ public class SubstituteAllTest {
 
 	@Test
 	public void test2Rounds() {
-		String source = "b is t, t b,";
+		String source = "b is T, T b,";
 
 		String actual = Methods.substituteAll(source, 'b', "beauty");
-		assertEquals("beauty is t, t beauty,", actual);
+		assertEquals("beauty is T, T beauty,", actual);
 
-		String actualPrime = Methods.substituteAll(actual, 't', "truth");
+		String actualPrime = Methods.substituteAll(actual, 'T', "truth");
 		assertEquals("beautruthy is truth, truth beautruthy,", actualPrime);
 	}
 
